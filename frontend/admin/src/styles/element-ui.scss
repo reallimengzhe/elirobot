@@ -1,0 +1,88 @@
+// @import './variables.scss';
+
+/* 改变主题色变量 */
+$--color-primary: $theme-color;
+$--color-danger: $function-font-color--error;
+$--border-radius-base: 2px;
+/* 改变 icon 字体路径变量，必需 */
+$--font-path: '~element-ui/lib/theme-chalk/fonts';
+
+@import "~element-ui/packages/theme-chalk/src/index";
+
+button.el-button--small{
+  font-size: 14px;
+  border-radius: 2px;
+}
+
+
+//表格样式
+div.el-table thead,div.el-table thead tr, div.el-table thead tr th{
+  background-color: $table-header-bg-color;
+}
+.el-table--border th{
+  border-color:$line-color--C;
+  height: 55px;
+}
+.el-table th,
+.el-table tr:hover{
+  background-color: $base-color--light;
+}
+.el-table--enable-row-hover{
+  .el-table__body{
+    tr:hover{
+      &>td{
+        background-color: transparent!important;
+        // border-right: 1px solid #e3e3e3;
+        border-right:1px solid $line-color--C;
+      }
+    }
+  }
+}
+.el-table{
+  min-height: 130px;
+}
+.el-table tbody .cell{
+  font-size: $font-size--small;
+  color:$font-color--main;
+}
+.el-table tbody .cell .el-button--text{
+  font-weight: $font-weight-bold;
+  color:$theme-color;
+
+}
+
+.el-table th.is-right,
+.el-table td.is-right{
+  border-right: 0;
+  padding-right: 5px;
+}
+.el-table th.is-leaf,
+.el-table td.is-leaf{
+  padding-left: 5px;
+}
+.el-table .is-last-colum{
+  border-right: 0;
+  padding-right: 5px;
+}
+
+
+
+
+/*table固定列样式*/
+.fixTable .el-table__fixed {
+  box-shadow: 0 -10px 6px rgba(0, 0, 0, 0.12);
+}
+.fixTable .el-table__fixed-right{
+  box-shadow: 0px -10px 6px rgba(0,0,0,0.12);
+}
+.fixTable.el-table--border{
+ border-left: none;
+}
+.fixTable.el-table--group::after,
+.fixTable.el-table--border::after{
+width:0;
+}
+.el-table__fixed::before,
+.el-table__fixed-right::before {
+  opacity: 0;
+}

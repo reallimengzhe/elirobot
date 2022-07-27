@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>艾利特机器人_协作机器人_协作机械臂_机器人机械臂_协作机械臂_工业机械臂</title>
+    <meta name="keywords" content="协作机器人，协作机械臂，机器人机械臂，协作机械臂，工业机械臂">
+    <meta name="description" content="艾利特机器人是一家集研发、生产、销售于一体的协作机器人企业。提升国内企业自动化水平、降低自动化门槛，艾利特致力为用户提供基于共平台控制能力的协作机器人产品，坚持性能比肩国外品牌的策略，为用户提供高成本效益的解决方案。目前艾利特机器人在汽车整车及零部件、工程机械、3C电子、包装物流、金属加工、橡胶塑料、化学原料及化学制品等行业中已经获得了积极的用户口碑。">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      html,body{
+        padding: 0;
+        margin: 0;
+      }
+      .footer{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100vw;
+        /* height: 40vh; */
+        background-color: rgba(0,0,0,.83);
+        box-sizing: border-box;
+        padding-top: 2vh;
+        padding-bottom: 2vh;
+      }
+      .footer__img--logo{
+        display: block;
+        width: 50vw;
+        height: 15vw;
+        margin: 0 auto 5vh;
+      }
+      .footer--qrcode{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .footer__div--qrcode{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #a7a8aa;
+      }
+      .footer__img--qrcode{
+        width: 14vw;
+        height: 14vw;
+      }
+    </style>
+	</head>
+	<body>
+    <video id="video" style="width: 100vw;height: 30vh;" controls></video>
+    <div class="footer">
+      <img class="footer__img--logo" src="./image/logo-er.png" alt="elite robot">
+      <div class="footer--qrcode">
+        <div class="footer__div--qrcode">
+          <img class="footer__img--qrcode" src="./image/gzh.jpg" alt="公众号">
+          <p>公众号</p>
+        </div>
+        <div class="footer__div--qrcode">
+          <img class="footer__img--qrcode" src="./image/sph.jpg" alt="视频号">
+          <p>视频号</p>
+        </div>
+        <div class="footer__div--qrcode">
+          <img class="footer__img--qrcode" src="./image/dy.png" alt="抖音">
+          <p>抖音</p>
+        </div>
+        <div class="footer__div--qrcode">
+          <img class="footer__img--qrcode" src="./image/xcx.jpg" alt="小程序">
+          <p>小程序</p>
+        </div>
+      </div>
+    </div>
+	</body>
+  <script>
+    (function() {
+      function getQueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return unescape(r[2]); return null;
+      }
+
+      var url = getQueryString('oss')
+      if(!url) return
+      var video = document.getElementById('video')
+      video.src = url
+    })()
+  </script>
+</html>

@@ -1,0 +1,231 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+    /* font-size: 0; */
+}
+
+p {
+    margin: 0;
+}
+
+.display--flex {
+    display: flex;
+}
+
+.font-weight {
+    font-weight: bold;
+}
+
+.font-size--10 {
+    font-size: 0.052rem;
+}
+
+.font-size--11 {
+    font-size: 0.05729167rem;
+}
+
+.font-size--12 {
+    font-size: 0.0625rem;
+}
+
+.font-size--14 {
+    font-size: 0.07291667rem;
+}
+
+.font-size--16 {
+    font-size: 0.0833rem;
+}
+
+.font-size--20 {
+    font-size: 0.10416rem;
+}
+
+.font-size--22 {
+    font-size: .11458rem;
+}
+
+.font-size--24 {
+    font-size: .125rem;
+}
+
+.font-size--36 {
+    font-size: .1875rem;
+}
+
+.font-size--30 {
+    font-size: .15625rem;
+}
+
+.font-size--42 {
+    font-size: 0.21875rem;
+}
+
+.font-size--45 {
+    font-size: .2343rem;
+}
+
+.font-size--56 {
+    font-size: .2916rem;
+}
+
+.font-size--60 {
+    font-size: .3125rem;
+}
+
+.font-size--66 {
+    font-size: .34375rem;
+}
+
+.font-size--76 {
+    font-size: .3958rem;
+}
+
+.font-size--86 {
+    font-size: .4479rem;
+}
+
+.m .font-size--10 {
+    font-size: .2rem;
+}
+
+.m .font-size--12 {
+    font-size: .24rem;
+}
+
+.m .font-size--14 {
+    font-size: .28rem;
+}
+
+.m .font-size--16 {
+    font-size: .36rem;
+}
+
+.m .font-size--20 {
+    font-size: .40rem;
+}
+
+.m .font-size--22 {
+    font-size: .44rem;
+}
+
+.m .font-size--24 {
+    font-size: .48rem;
+}
+
+.m .font-size--36 {
+    font-size: .72rem;
+}
+
+.m .font-size--30 {
+    font-size: .6rem;
+}
+
+.m .font-size--42 {
+    font-size: .84rem;
+}
+
+.m .font-size--45 {
+    font-size: .9rem;
+}
+
+.m .font-size--56 {
+    font-size: 1.12rem;
+}
+
+.m .font-size--66 {
+    font-size: 1.32rem;
+}
+
+.m .font-size--60 {
+    font-size: 1.2rem;
+}
+
+.m .font-size--76 {
+    font-size: 1.52rem;
+}
+
+.m .font-size--86 {
+    font-size: 1.72rem;
+}
+
+.margin-top--20 {
+    margin-top: .25rem;
+}
+
+.margin-bottom--392 {
+    margin-bottom: .362963rem;
+}
+
+.margin-bottom--10 {
+    margin-bottom: 10px;
+}
+
+.margin-bottom--20 {
+    margin-bottom: 20px;
+}
+
+.margin-bottom--30 {
+    margin-bottom: 30px;
+}
+
+.margin-bottom--40 {
+    margin-bottom: 40px;
+}
+
+.margin-bottom--50 {
+    margin-bottom: 50px;
+}
+
+.margin-bottom--100 {
+    margin-bottom: 100px;
+}
+
+.m .margin-bottom--10 {
+    margin-bottom: .1rem;
+}
+
+.m .margin-bottom--20 {
+    margin-bottom: .2rem;
+}
+
+.m .margin-bottom--30 {
+    margin-bottom: .3rem;
+}
+
+.m .margin-bottom--40 {
+    margin-bottom: .4rem;
+}
+
+.m .margin-bottom--50 {
+    margin-bottom: .5rem;
+}
+
+.m .margin-bottom--100 {
+    margin-bottom: 1rem;
+}
+
+.line-height--16 {
+    line-height: 16px;
+}
+
+.line-height--20 {
+    line-height: 20px;
+}
+
+.line-height--24 {
+    line-height: 24px;
+}
+
+.line-height--28 {
+    line-height: 28px;
+}
+
+.line-height--32 {
+    /* line-height: 32px; */
+    line-height: .166667rem;
+}
+
+.text-align--center {
+    text-align: center;
+}
