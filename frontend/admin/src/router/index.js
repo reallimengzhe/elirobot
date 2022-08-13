@@ -7,6 +7,7 @@ Vue.use(Router)
 import Layout from '@/layout'
 import Material from './modules/material.js'
 import BaseSetting from './modules/baseSetting.js'
+import IndexPage from './modules/indexPage'
 import CustomerOperation from './modules/customerOperation.js'
 /**
  * 静态路由
@@ -54,6 +55,7 @@ export const constantRoutes = [
 ]
 // 异步加载路由
 export const asyncRoutes = [
+  IndexPage,
   Material,
   BaseSetting,
   CustomerOperation,

@@ -28,9 +28,7 @@
 
 <script>
 import { API_URL } from '@/utils/const.js'
-import {
-  uploadApi
-} from '@/api/material.js'
+import {uploadApi} from '@/api/common.js'
 export default{
   name: 'Upload',
   props: {

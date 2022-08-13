@@ -89,13 +89,13 @@ import IconButton from '@/components/IconButton'
 import Upload from './Upload.vue'
 import PageMixin from '@/mixins/page.js'
 import Page from "@/components/FixedFooterPage/Page.vue"
+import {uploadApi} from '@/api/common.js'
 import {
   getMaterialListApi,
   getMaterialQrCodeApi,
   getMaterialQrCodeUrlApi,
   editFilenameApi,
-  delMaterialApi,
-  uploadApi
+  delMaterialApi
 } from '@/api/material.js'
 import { ExportExcel } from '@/utils/exportExcel.js'
 import { API_URL, H5_VIDEO_URL } from '@/utils/const.js'

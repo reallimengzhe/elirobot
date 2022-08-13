@@ -65,3 +65,8 @@ export function editDictionStateApi(id, state) {
     method: 'post'
   })
 }
+
+// 获得素材库列表-上传地址
+export function uploadApi() {
+  return '/auth/common/uploadAndSave'
+}

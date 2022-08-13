@@ -17,6 +17,7 @@ service.interceptors.request.use(
     //   return
     // }
     config.headers.Authorization = getToken()
+    console.log(config);
     return config
   },
   error => {

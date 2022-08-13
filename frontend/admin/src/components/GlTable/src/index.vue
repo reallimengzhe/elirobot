@@ -1,6 +1,6 @@
 <template>
 	<section ref="tableBox">
-		<el-table ref="elTable" size="middle" border :stripe="stripe" class="gl-table" v-bind="$attrs" v-on="$listeners">
+		<el-table ref="elTable" size="middle" border :stripe="stripe" class="gl-table" :data="tableData" v-on="$listeners">
 		<!-- 	<template slot="empty">
 				<gl-empty class="gl-table-empty"></gl-empty>
 			</template> -->
@@ -39,6 +39,10 @@ export default {
 		stripe: {
 			type: Boolean,
 			default: true
+		},
+		tableData:{
+			type: Array,
+			default: ()=>{return []}
 		}
 	},
 	data() {
@@ -77,6 +81,7 @@ export default {
 		}
 	},
 	mounted() {
+		console.log(this);
 		if (this.fixed) {
 			this.initShadow();
 		}
