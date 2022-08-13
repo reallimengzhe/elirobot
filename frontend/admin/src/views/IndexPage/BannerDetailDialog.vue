@@ -382,7 +382,6 @@ export default {
     },
 
     resetForm() {
-      this.form.id = 0;
       this.form.type = 1;
       this.form.cnImageUrl = "";
       this.form.cnGotoUrl = "";
