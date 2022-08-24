@@ -27,30 +27,30 @@ export const constantRoutes = [
   {
     path: '/',
     component: Layout,
-    redirect: '/home',
-    children: [
-      {
-        path: 'home',
-        name: 'Home',
-        component: () => import('@/views/Home/index'),
-        meta: {
-          title: '首页',
-          Affix: true,
-          icon: 'icon-home',
-          full: true,
-          noCache: false
-        }
-      },
-      {
-        path: 'redirect',
-        hidden: true,
-        component: () => import('@/views/redirect'),
-        beforeEnter: (to, from, next) => {
-          const path = to.fullPath.substring(to.fullPath.indexOf('=') + 1)
-          next({ path: decodeURIComponent(path), replace: true })
-        }
-      }
-    ]
+    redirect: '/indexPage',
+    // children: [
+    //   {
+    //     path: 'home',
+    //     name: 'Home',
+    //     component: () => import('@/views/Home/index'),
+    //     meta: {
+    //       title: '首页',
+    //       Affix: true,
+    //       icon: 'icon-home',
+    //       full: true,
+    //       noCache: false
+    //     }
+    //   },
+    //   {
+    //     path: 'redirect',
+    //     hidden: true,
+    //     component: () => import('@/views/redirect'),
+    //     beforeEnter: (to, from, next) => {
+    //       const path = to.fullPath.substring(to.fullPath.indexOf('=') + 1)
+    //       next({ path: decodeURIComponent(path), replace: true })
+    //     }
+    //   }
+    // ]
   }
 ]
 // 异步加载路由

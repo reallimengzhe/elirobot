@@ -70,7 +70,7 @@
       </template>
     </GlSearchForm>
 
-    <gl-table :data="list" fixed>
+    <el-table :data="list" fixed>
       <el-table-column prop="code" label="留资编号" width="100" />
       <el-table-column prop="companyName" label="公司名称" min-width="180" align="center" />
       <el-table-column prop="industry" label="行业" width="120" align="center" >
@@ -110,7 +110,7 @@
           <el-button type="text" @click="onDel(row)">删除</el-button>
         </template>
       </el-table-column>
-    </gl-table>
+    </el-table>
 
 
     <Page
@@ -187,6 +187,7 @@ export default {
       getRetentionListApi(this.getApiParams()).then(res => {
         this.list = res.data.records
         this.page.total = res.data.totalCount
+        console.log("a",this);
       })
     },
     onSearch() {

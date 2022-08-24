@@ -24,7 +24,7 @@ const filterDirectionValue = (value, key, originalValue) =>{
 		}
 	  }
 	}else{
-	  return '不存在key值'
+	  return ''
 	}
 	if(originalValue){
 		return value

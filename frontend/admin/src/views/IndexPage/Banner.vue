@@ -120,7 +120,7 @@ export default {
 
     delData(data) {
       console.log(data);
-      this.$confirm("此操作将永久删除该文件, 是否继续?", "提示", {
+      this.$confirm("此操作将永久删除该数据, 是否继续?", "提示", {
         confirmButtonText: "确定",
         cancelButtonText: "取消",
         type: "warning",
@@ -218,7 +218,7 @@ export default {
 }
 .grid-image {
   line-height: 200px;
-  width: 380px;
+  width: 100%;
   height: 200px;
 }
 .grid-upload-image {

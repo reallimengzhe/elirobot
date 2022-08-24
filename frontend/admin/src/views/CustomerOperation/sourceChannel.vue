@@ -13,7 +13,7 @@
         </el-select>
     </div>
 
-    <gl-table :data="list" fixed>
+    <el-table :data="list" fixed>
       <el-table-column prop="id" label="序号" width="60" />
       <el-table-column prop="name" label="来源渠道" min-width="100" align="center">
         <template v-slot="{row}">
@@ -64,7 +64,7 @@
         </template>
 
       </el-table-column>
-    </gl-table>
+    </el-table>
 
     <AddSourceChannel ref="AddSourceChannel" @update="getListData"/>
 

@@ -32,14 +32,14 @@
       </template>
     </GlSearchForm>
 
-    <gl-table :data="list" fixed>
+    <el-table :data="list" fixed>
       <el-table-column prop="code" label="用户编号" width="100" />
       <el-table-column prop="realName" label="姓名" min-width="60" align="center" />
       <el-table-column prop="mobile" label="电话" width="120" align="center" />
       <el-table-column prop="email" label="邮箱" width="160" align="center" />
       <el-table-column prop="companyName" label="所在公司 " min-width="120" align="center" />
       <el-table-column prop="createTime" label="注册时间 " width="180" align="right" />
-    </gl-table>
+    </el-table>
 
 
     <Page

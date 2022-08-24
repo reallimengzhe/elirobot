@@ -16,7 +16,7 @@
       </div>
     </div>
 
-    <gl-table :data="list" fixed>
+    <el-table :data="list" fixed>
       <el-table-column prop="fileName" label="文件名" min-width="180" >
         <template v-slot="{row}">
           <el-button type="text" @click="onOpenFile(row)">{{row.fileName}}</el-button>
@@ -43,7 +43,7 @@
         </template>
 
       </el-table-column>
-    </gl-table>
+    </el-table>
 
     <Page
       fixed
