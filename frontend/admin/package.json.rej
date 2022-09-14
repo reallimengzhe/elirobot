@@ -1,9 +1,0 @@
-diff a/package.json b/package.json	(rejected hunks)
-@@ -6,6 +6,7 @@
-   "license": "MIT",
-   "private": true,
-   "scripts": {
-+    "dev": "vue-cli-service serve --modern --mode test",
-     "build:prod": "vue-cli-service build",
-     "build:stage": "vue-cli-service build --modern --mode staging",
-     "build:test": "vue-cli-service build --modern --mode test",
