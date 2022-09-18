@@ -1,0 +1,41 @@
+/*
+* @Author: [Hi.James] <1041168713@qq.com>
+* @Date:   2020-09-14 11:02:05
+* @Last Modified by:   [Hi.James] <1041168713@qq.com>
+* @Last Modified time: 2020-10-12 16:20:35
+*/
+
+@font-face {
+  font-family: 'hscr';
+  src: url('../font/HarmonyOS_Sans_SC_Regular.ttf');
+}
+
+@font-face {
+  font-family: 'hscb';
+  src: url('../font/HarmonyOS_Sans_SC_Bold.ttf');
+}
+
+@font-face {
+  font-family: 'hscblack';
+  src: url('../font/HarmonyOS_Sans_SC_Black.ttf');
+}
+
+@font-face {
+  font-family: 'hscm';
+  src: url('../font/HarmonyOS_Sans_SC_Medium.ttf');
+}
+
+@font-face {
+  font-family: 'hscl';
+  src: url('../font/HarmonyOS_Sans_SC_Light.ttf');
+}
+
+@font-face {
+  font-family: 'hsct';
+  src: url('../font/HarmonyOS_Sans_SC_Thin.ttf');
+}
+
+html,
+body {
+  font-family: 'hscr' !important;
+}
