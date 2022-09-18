@@ -1,0 +1,122 @@
+// sidebar
+$menuText:#bfcbd9;
+$menuActiveText:#464A57;
+$subMenuActiveText:#f4f4f5; //https://github.com/ElemeFE/element/issues/12951
+
+$menuBg:#464A57;
+$menuHover: #585D6B;
+$menuActiveBg: #F0F2F5;
+
+$subMenuBg:#1f2d3d;
+$subMenuHover:#585D6B;
+
+$sideBarWidth: 200px;
+$sideBarHideWidth: 78px;
+
+// $theme-color: #0179fd; //#FF9012; //20210429 修改主题色
+$content-height: calc(100vh - 116px);
+
+// the :export directive is the magic sauce for webpack
+// https://www.bluematador.com/blog/how-to-share-variables-between-js-and-sass
+:export {
+  menuText: $menuText;
+  menuActiveText: $menuActiveText;
+  subMenuActiveText: $subMenuActiveText;
+  menuBg: $menuBg;
+  menuHover: $menuHover;
+  subMenuBg: $subMenuBg;
+  subMenuHover: $subMenuHover;
+  sideBarWidth: $sideBarWidth;
+  contentHeight: $content-height;
+}
+
+
+// 橙色主题
+/*UI统一规范基础变量 样式----------start*/
+
+/*辅助色*/
+$assist-color:#bb9826;
+$select-hover--bg: #FFF2E2;
+
+
+
+
+$contentHeight: calc(100vh - 122px);
+
+
+// 输出变量
+:export {
+	contentHeight: $contentHeight
+}
+
+
+/*UI统一规范基础变量 样式----------start*/
+
+/*主颜色变量*/
+$theme-color:#0179fd;
+$base-color--dark:#4c9b70;
+$base-color--light:#e6f1eb;
+
+/*功能颜色变量 ---例如 操作 轻提示颜色*/
+$function-font-color--success:#089c4c;/*成功*/
+$function-bg-color--success:#e6f1eb;
+$function-font-color--warning:#faad14;/*警告*/
+$function-bg-color--warning:#fff5d9;
+$function-font-color--error:#e02020;/*错误*/
+$function-bg-color--error:#ffebeb;
+
+/*辅助色*/
+$assist-color:#bb9826;
+
+/*标签色*/
+$tag-font-color--36cbcb:#36cbcb;
+$tag-bg-color--eaf9f9:#eaf9f9;
+$tag-font-color--1890ff:#1890ff;
+$tag-bg-color--e7f3ff:#e7f3ff;
+$tag-font-color--fa9b33:#fa9b33;
+$tag-bg-color--fef5ea:#fef5ea;
+$tag-font-color--f5f5f5:#f5f5f5;
+$tag-bg-color--cccccc:#cccccc;
+
+/*中性色--文字颜色,线条颜色,表格....*/
+$font-color--main:#333333;/*主要文字*/
+$font-color--normal:#666666;/*常规文字*/
+$font-color--secondary:#999999;/*次要文字*/
+
+$line-color--A:#dcdee0;/*一级线*/
+$line-color--B:#e4e7ed;/*二级线*/
+$line-color--C:#ebedf0;/*三级线*/
+
+$border-color:#cccccc;/*边框*/
+$bg-color--f0f2f5:#f0f2f5;/*背景色*/
+
+$disabled-txt-color:#f5f5f5;/*不可修改文字*/
+
+$table-header-bg-color:#f7f7f7;/*表头背景色*/
+$table-row-bg-color:#fafafa;/*表行背景色*/
+
+$base-black:#000000;/*基础黑色*/
+$base-white:#ffffff;/*基础白色*/
+
+/*文字*/
+$font-size--max:24px;
+$font-size--big:20px;
+$font-size--medium:16px;
+$font-size--small:14px;
+$font-size--mini:12px;
+
+/*字重*/
+$font-weight-bold: 700;
+$font-weight-normal: 400;
+
+/*圆角*/
+$border-radius--normal:2px;
+$border-radius--big:4px;
+
+
+$select-hover--bg: #E5F0EA;
+/*UI统一规范基础变量 样式----------end*/
+
+
+
+/*UI统一规范基础变量 样式----------end*/
