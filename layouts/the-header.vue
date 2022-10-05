@@ -1,11 +1,11 @@
 <template>
-  <header :class="['the-header', { 'dark-mode': isDarkMode }]">
+  <header :class="['the-header', { 'light-mode': isLightMode }]">
     <nuxt-link to="/" class="the-header-logo">
       <img
         :src="
-          isDarkMode
-            ? require('@/assets/images/header/logo_white.svg')
-            : require('@/assets/images/header/logo.svg')
+          isLightMode
+            ? require('@/assets/images/header/logo.svg')
+            : require('@/assets/images/header/logo_white.svg')
         "
         alt="logo"
         width="100%"
@@ -73,7 +73,7 @@ export default {
         { label: 'about', path: '/about', subNav: NavAbout },
       ],
       // 黑色导航的页面
-      darkModeRoutes: ['/', '/product/ec', '/product/cs'],
+      lightModeRoutes: ['/product/ec/ec66'],
       // 当前打开的一级导航
       activeNav: -1,
     }
@@ -85,9 +85,9 @@ export default {
       return this.$i18n.locales
     },
     //
-    isDarkMode() {
+    isLightMode() {
       return (
-        this.activeNav === -1 && this.darkModeRoutes.includes(this.$route.path)
+        this.activeNav > -1 || this.lightModeRoutes.includes(this.$route.path)
       )
     },
   },
@@ -114,26 +114,24 @@ export default {
   top: 0;
   z-index: 2;
 
-  box-sizing: border-box;
   width: 100%;
-  height: 60px;
+  height: 0.3125rem;
   padding: 0 0.625rem;
-
-  font-size: var(--font-size-16px);
-
-  backdrop-filter: blur(10px);
+  box-sizing: border-box;
 
   display: flex;
   align-items: center;
 
   transition: all 225ms;
 
-  color: var(--color-main-bg);
-  background-color: white;
+  font-size: var(--font-size-16px);
+  backdrop-filter: blur(10px);
+  color: white;
+  background-color: rgba(0, 8, 22, 0.12);
 
-  &.dark-mode {
-    color: white;
-    background-color: rgba(0, 8, 22, 0.12);
+  &.light-mode {
+    color: var(--color-main-bg);
+    background-color: white;
   }
 
   &-logo {
@@ -143,11 +141,14 @@ export default {
 
   &-nav {
     display: flex;
+    height: 100%;
     margin-left: auto;
     &-item {
       > span {
-        height: 58px;
+        display: block;
+        height: 100%;
         transition: all 225ms;
+        box-sizing: border-box;
 
         display: flex;
         align-items: center;
@@ -170,7 +171,7 @@ export default {
       }
       &-subnav {
         position: absolute;
-        top: 60px;
+        top: 0.3125rem;
         left: 0;
 
         width: 100%;

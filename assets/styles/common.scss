@@ -49,6 +49,11 @@
   animation-delay: 500ms;
 }
 
+.animate__animated.animate__delay-1500ms {
+  -webkit-animation-delay: 1500ms;
+  animation-delay: 1500ms;
+}
+
 .background_image-cover {
   background-position: center;
   background-size: cover;

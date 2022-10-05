@@ -30,9 +30,9 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     // '@/plugins/element-ui',
+    // { src: '@/plugins/swiper', mode: 'client' },
 
     { src: '@/plugins/vue-agile', mode: 'client' },
-    // { src: '@/plugins/swiper', mode: 'client' },
     { src: '@/plugins/flexible', mode: 'client' },
     { src: '@/plugins/svg-icon', ssr: true },
   ],

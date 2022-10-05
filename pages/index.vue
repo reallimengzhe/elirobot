@@ -15,7 +15,7 @@
       >
         <h1
           :class="{
-            'animate__animated animate__fadeInDown':
+            'animate__animated animate__fadeInDown animate__delay-500ms':
               bannerActiveIndex === index,
           }"
         >
@@ -23,7 +23,7 @@
         </h1>
         <h5
           :class="{
-            'animate__animated animate__fadeInDown animate__delay-500ms':
+            'animate__animated animate__fadeInDown animate__delay-1s':
               bannerActiveIndex === index,
           }"
         >
@@ -33,7 +33,7 @@
           :class="[
             'link_primary',
             {
-              'animate__animated animate__fadeInDown animate__delay-1s':
+              'animate__animated animate__fadeInDown animate__delay-1500ms':
                 bannerActiveIndex === index,
             },
           ]"
@@ -245,15 +245,15 @@ export default {
           link: '',
         },
         {
-          title: '艾利特协作机器人复杂应用简单化 ',
+          title: '艾利特协作机器人复杂应用简单化',
           des: '安全，灵活，高效，助力企业实现柔性自动化',
-          src: 'https://s3.bmp.ovh/imgs/2022/09/22/b57653be396a872e.png',
+          src: 'https://s3.bmp.ovh/imgs/2022/09/27/365c7e92580f48b7.png',
           link: '',
         },
         {
           title: '3',
           des: '789',
-          src: 'https://s3.bmp.ovh/imgs/2022/09/22/b57653be396a872e.png',
+          src: 'https://s3.bmp.ovh/imgs/2022/10/04/b097cff2e2849c50.png',
           link: '',
         },
       ],
