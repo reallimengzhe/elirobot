@@ -94,7 +94,7 @@
           :key="feat.name"
         >
           <h2>{{ feat.name }}</h2>
-          <p v-show="feat.desc">{{ feat.desc }}</p>
+          <p v-if="feat.desc">{{ feat.desc }}</p>
         </div>
       </div>
       <p class="cs-console-desc">
@@ -133,7 +133,7 @@
             @click="product.checked = !product.checked"
             :class="[{ 'is-active': product.checked }]"
           >
-            <svg-icon icon="close" v-show="product.checked"></svg-icon>
+            <svg-icon icon="close" v-if="product.checked"></svg-icon>
             <h1>{{ product.name }}</h1>
             <img :src="product.img" :alt="product.name" />
           </div>

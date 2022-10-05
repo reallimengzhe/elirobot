@@ -32,7 +32,7 @@
           leaveActiveClass="animate__animated animate__fadeOut"
         >
           <component
-            v-show="activeNav === index"
+            v-if="activeNav === index"
             class="the-header-nav-item-subnav"
             :is="nav.subNav"
           ></component>
