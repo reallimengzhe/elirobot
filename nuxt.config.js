@@ -23,16 +23,16 @@ export default {
     '@/assets/styles/reset.css',
     '@/assets/styles/common.scss',
     'animate.css/animate.min.css',
-    'element-ui/lib/theme-chalk/index.css',
+    // 'element-ui/lib/theme-chalk/index.css',
     '@/assets/styles/variables.css',
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    '@/plugins/element-ui',
+    // '@/plugins/element-ui',
 
     { src: '@/plugins/vue-agile', mode: 'client' },
-    { src: '@/plugins/swiper', mode: 'client' },
+    // { src: '@/plugins/swiper', mode: 'client' },
     { src: '@/plugins/flexible', mode: 'client' },
     { src: '@/plugins/svg-icon', ssr: true },
   ],
@@ -71,7 +71,7 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    transpile: [/^element-ui/],
+    // transpile: [/^element-ui/],
 
     // svg-icon
     extend(config, ctx) {

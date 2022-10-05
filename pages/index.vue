@@ -381,28 +381,9 @@ export default {
         },
       ],
       videoCase: '',
-
-      pro_swiper: null,
-      case_swiper: null,
     }
   },
-  computed: {
-    // 满屏滚动 Swiper
-    mainSwiperOptions: () => {
-      return {
-        // height: document.client.height,
-        spaceBetween: 0,
-        direction: 'vertical',
-        mousewheel: true,
-
-        loop: false, // 开启循环模式
-        autoplay: false,
-        speed: 3000,
-        parallax: true,
-        // freeMode: true
-      }
-    },
-  },
+  computed: {},
   created() {
     // 国内外服务器分开后这里不用调用腾讯API接口区分IP来源  by:eli 2021-03-12
     if (process.client && !sessionStorage.getItem('autoLink')) {
@@ -421,15 +402,6 @@ export default {
       this.productActiveIndex = currentSlide
     },
 
-    overHandle() {
-      this.case_swiper.autoplay.stop()
-    },
-    outHandle() {
-      this.case_swiper.autoplay.start()
-    },
-    getSwiperHeight() {
-      return window.innerHeight - (60 / 1080) * window.innerHeight
-    },
     openUrl() {
       // window.open("http://new.elibot.cn/page/product/compound-robot/index.html");
     },

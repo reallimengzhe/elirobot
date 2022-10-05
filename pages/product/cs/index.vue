@@ -89,9 +89,9 @@
     <div class="cs-console">
       <div class="cs-console-feat">
         <div
-          v-for="feat in consoleFeats"
-          :key="feat"
           class="cs-console-feat-item column-center"
+          v-for="feat in consoleFeats"
+          :key="feat.name"
         >
           <h2>{{ feat.name }}</h2>
           <p v-if="feat.desc">{{ feat.desc }}</p>
