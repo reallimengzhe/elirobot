@@ -1,0 +1,31 @@
+:root {
+  /* color */
+  --color-blue: #00acff;
+  --color-main-bg: #000816;
+
+  /* font size */
+  --font-size-12px: 0.0625rem;
+  --font-size-14px: 0.073rem;
+  --font-size-16px: 0.083rem;
+  --font-size-18px: 0.09375rem;
+  --font-size-20px: 0.104rem;
+  --font-size-24px: 0.125rem;
+  --font-size-32px: 0.167rem;
+  --font-size-48px: 0.25rem;
+  --font-size-64px: 0.333rem;
+
+  /* margin padding width height... */
+  --length-40px: 0.208rem;
+  --length-50px: 0.26rem;
+  --length-60px: 0.3125rem;
+  --length-80px: 0.417rem;
+  --length-100px: 0.521rem;
+  --length-120px: 0.625rem;
+  --length-160px: 0.833rem;
+  --length-200px: 1.042rem;
+  --length-300px: 1.5625rem;
+
+  /* animate.css */
+  --animate-duration: 225ms;
+  /* --animate-delay: 0; */
+}

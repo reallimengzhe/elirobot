@@ -1,0 +1,35 @@
+@font-face {
+  font-family: 'hssr';
+  src: url('../font/HarmonyOS_Sans_SC_Regular.ttf');
+}
+
+@font-face {
+  font-family: 'hssl';
+  src: url('../font/HarmonyOS_Sans_SC_Light.ttf');
+}
+
+/* @font-face {
+  font-family: 'hscb';
+  src: url('../font/HarmonyOS_Sans_SC_Bold.ttf');
+}
+
+@font-face {
+  font-family: 'hscblack';
+  src: url('../font/HarmonyOS_Sans_SC_Black.ttf');
+}
+
+@font-face {
+  font-family: 'hscm';
+  src: url('../font/HarmonyOS_Sans_SC_Medium.ttf');
+}
+
+@font-face {
+  font-family: 'hsct';
+  src: url('../font/HarmonyOS_Sans_SC_Thin.ttf');
+} */
+
+html,
+body,
+button {
+  font-family: 'hssr';
+}

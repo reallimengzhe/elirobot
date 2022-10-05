@@ -1,0 +1,56 @@
+.gradient_text {
+  background-image: linear-gradient(90deg, #0083ff 0%, #00d1ff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient_border {
+  border: 1px solid transparent;
+  border-image: linear-gradient(90deg, #0083ff, #00d1ff) 1 1 !important;
+}
+
+.button_primary {
+  @extend .gradient_border;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  padding: var(--font-size-12px) 0;
+
+  cursor: pointer;
+
+  span {
+    margin-right: 0.0625rem;
+    font-size: var(--font-size-14px);
+  }
+}
+
+.link_primary {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  span {
+    margin-right: 0.0625rem;
+    font-size: var(--font-size-14px);
+  }
+}
+
+.column-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.animate__animated.animate__delay-500ms {
+  -webkit-animation-delay: 500ms;
+  animation-delay: 500ms;
+}
+
+.background_image-cover {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
