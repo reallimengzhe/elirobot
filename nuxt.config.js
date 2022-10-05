@@ -89,9 +89,9 @@ export default {
       })
     },
   },
-  generate: {
-    minify: {
-      collapseWhitespace: false,
-    },
-  },
+  // generate: {
+  //   minify: {
+  //     collapseWhitespace: false,
+  //   },
+  // },
 }
