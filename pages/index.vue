@@ -1,55 +1,6 @@
 <template>
   <div class="the-index">
     <!-- banner -->
-    <agile
-      class="the-index-banner"
-      :options="{
-        dots: false,
-        navButtons: false,
-        autoplay: true,
-        pauseOnHover: false,
-      }"
-      @after-change="onBannerChange"
-    >
-      <div
-        v-for="(item, index) in bannerList"
-        class="the-index-banner-slide"
-        :key="item.title"
-        :style="{ backgroundImage: 'url(' + item.src + ')' }"
-      >
-        <h1
-          :class="{
-            'animate__animated animate__fadeInDown animate__delay-500ms':
-              bannerActiveIndex === index,
-          }"
-        >
-          {{ item.title }}
-        </h1>
-        <h5
-          :class="{
-            'animate__animated animate__fadeInDown animate__delay-1s':
-              bannerActiveIndex === index,
-          }"
-        >
-          {{ item.des }}
-        </h5>
-        <div
-          :class="[
-            'link_primary',
-            {
-              'animate__animated animate__fadeInDown animate__delay-1500ms':
-                bannerActiveIndex === index,
-            },
-          ]"
-        >
-          <span class="gradient_text">
-            {{ $t('common.get_details') }}
-          </span>
-
-          <img src="@/assets/images/common/triangle.svg" />
-        </div>
-      </div>
-    </agile>
     <!-- 产品系列 -->
     <div class="the-index-product">
       <agile
