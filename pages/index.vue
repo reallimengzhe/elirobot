@@ -17,12 +17,7 @@
         :key="item.title"
         :style="{ backgroundImage: 'url(' + item.src + ')' }"
       >
-        <h1
-          :class="{
-            'animate__animated animate__fadeInDown animate__delay-500ms':
-              index === bannerActiveIndex,
-          }"
-        >
+        <h1>
           {{ item.title }}
         </h1>
         <!-- <h5
