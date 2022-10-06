@@ -28,6 +28,7 @@
           {{ $t('nav.' + nav.label) }}
         </span>
         <transition
+          tag="div"
           enterActiveClass="animate__animated animate__fadeIn"
           leaveActiveClass="animate__animated animate__fadeOut"
         >
