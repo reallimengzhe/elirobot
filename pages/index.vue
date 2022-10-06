@@ -17,7 +17,7 @@
         :key="item.title"
         :style="{ backgroundImage: 'url(' + item.src + ')' }"
       >
-        <h1
+        <!-- <h1
           :class="{
             'animate__animated animate__fadeInDown animate__delay-500ms':
               index === bannerActiveIndex,
@@ -32,7 +32,7 @@
           }"
         >
           {{ item.des }}
-        </h5>
+        </h5> -->
         <!-- <div
           :class="[
             'link_primary',
@@ -69,7 +69,7 @@
           :key="item.title"
           :style="{ backgroundImage: 'url(' + item.src + ')' }"
         >
-          <h1
+          <!-- <h1
             :class="{
               'animate__animated animate__fadeInDown':
                 productActiveIndex === index,
@@ -100,7 +100,7 @@
             }"
           >
             {{ item.des }}
-          </h5>
+          </h5> -->
           <!-- <div
             :class="[
               'link_primary',
