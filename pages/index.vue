@@ -1,133 +1,5 @@
 <template>
   <div class="the-index">
-    <!-- banner -->
-    <agile
-      class="the-index-banner"
-      :options="agileOptions"
-      @after-change="onBannerChange"
-    >
-      <div
-        v-for="(item, index) in bannerList"
-        class="the-index-banner-slide"
-        :key="index"
-        :style="{ backgroundImage: 'url(' + item.src + ')' }"
-        @click="openUrl(item.link)"
-      >
-        <h1
-          :class="{
-            'animate__animated animate__fadeInDown animate__delay-500ms':
-              bannerActiveIndex === index,
-          }"
-        >
-          {{ item.title }}
-        </h1>
-        <h5
-          :class="{
-            'animate__animated animate__fadeInDown animate__delay-1s':
-              bannerActiveIndex === index,
-          }"
-        >
-          {{ item.des }}
-        </h5>
-        <h6
-          :class="[
-            'link_primary',
-            {
-              'animate__animated animate__fadeInDown animate__delay-1500ms':
-                bannerActiveIndex === index,
-            },
-          ]"
-        >
-          <span class="gradient_text">
-            {{ $t('common.get_details') }}
-          </span>
-
-          <img src="@/assets/images/common/triangle.svg" />
-        </h6>
-      </div>
-    </agile>
-    <!-- 产品系列 -->
-    <div class="the-index-product">
-      <agile
-        ref="productSlide"
-        class="the-index-product-slide"
-        :options="agileOptions"
-        @after-change="onProductChange"
-      >
-        <div
-          class="the-index-product-slide-item"
-          v-for="(item, index) in productList"
-          :key="index"
-          :style="{ backgroundImage: 'url(' + item.src + ')' }"
-          @click="openUrl"
-        >
-          <h1
-            :class="{
-              'animate__animated animate__fadeInDown':
-                productActiveIndex === index,
-            }"
-          >
-            {{ item.title }}
-          </h1>
-          <h1
-            :class="{
-              'animate__animated animate__fadeInDown':
-                productActiveIndex === index,
-            }"
-          >
-            {{ item.title1 }}
-          </h1>
-          <h3
-            :class="{
-              'animate__animated animate__fadeInDown animate__delay-500ms':
-                productActiveIndex === index,
-            }"
-          >
-            {{ item.title2 }}
-          </h3>
-          <h5
-            :class="{
-              'animate__animated animate__fadeInDown animate__delay-500ms':
-                productActiveIndex === index,
-            }"
-          >
-            {{ item.des }}
-          </h5>
-          <a
-            :class="[
-              'link_primary',
-              {
-                'animate__animated animate__fadeInDown animate__delay-1s':
-                  productActiveIndex === index,
-              },
-            ]"
-          >
-            <span class="gradient_text">
-              {{ $t('common.get_details') }}
-            </span>
-
-            <img src="@/assets/images/common/triangle.svg" />
-          </a>
-        </div>
-      </agile>
-      <div class="the-index-product-thumbnails">
-        <div
-          v-for="(item, index) in productList"
-          :class="[
-            'the-index-product-thumbnails-item',
-            { 'is-active': productActiveIndex === index },
-          ]"
-          :key="index"
-          @mouseenter="$refs.productSlide.goTo(index)"
-        >
-          <img :src="item.src" />
-          <section>
-            <h3>{{ item.title3 }}</h3>
-            <p>{{ item.des1 }}</p>
-          </section>
-        </div>
-      </div>
-    </div>
     <!-- 客户案例 -->
     <div class="the-index-case">
       <div class="the-index-case-title">
@@ -136,8 +8,8 @@
       </div>
       <div class="the-index-case-content">
         <div
-          v-for="(item, index) in caseList"
-          :key="index"
+          v-for="item in caseList"
+          :key="item.title"
           :class="['the-index-case-content-item']"
           :style="{ backgroundImage: 'url(' + item.src + ')' }"
         >
@@ -239,13 +111,13 @@ export default {
       // banner 列表
       bannerList: [
         {
-          title: '艾利特协作机器人复杂应用简单化 ',
+          title: '艾利特协作机器人复杂应用简单化1',
           des: '安全，灵活，高效，助力企业实现柔性自动化',
           src: 'https://s3.bmp.ovh/imgs/2022/09/22/b57653be396a872e.png',
           link: '',
         },
         {
-          title: '艾利特协作机器人复杂应用简单化',
+          title: '艾利特协作机器人复杂应用简单化2',
           des: '安全，灵活，高效，助力企业实现柔性自动化',
           src: 'https://s3.bmp.ovh/imgs/2022/09/27/365c7e92580f48b7.png',
           link: '',
@@ -261,7 +133,7 @@ export default {
       // 产品系列列表
       productList: [
         {
-          title: '艾利特协作机器人',
+          title: '艾利特协作机器人1',
           title1: '经典CS系列',
           title2: 'CS SERIER ',
           title3: 'CS系列机器人',
@@ -269,10 +141,9 @@ export default {
           des1: 'CS63 / CS66 / CS612',
           src: 'https://s3.bmp.ovh/imgs/2022/09/17/10ded0215ce5b580.png',
           link: '',
-          activeClass: 'wow animated slideInDown slow',
         },
         {
-          title: '艾利特协作机器人',
+          title: '艾利特协作机器人2',
           title1: '经典CS系列',
           title2: 'CS SERIER ',
           title3: 'CS系列机器人',
@@ -280,10 +151,9 @@ export default {
           des1: 'CS63 / CS66 / CS612',
           src: 'https://s3.bmp.ovh/imgs/2022/09/17/49b63f5b5e0942fb.png',
           link: '',
-          activeClass: 'wow animated slideInDown slow',
         },
         {
-          title: '艾利特协作机器人',
+          title: '艾利特协作机器人3',
           title1: '经典CS系列',
           title2: 'CS SERIER ',
           title3: 'CS系列机器人',
@@ -291,7 +161,6 @@ export default {
           des1: 'CS63 / CS66 / CS612',
           src: 'https://s3.bmp.ovh/imgs/2022/09/17/10ded0215ce5b580.png',
           link: '',
-          activeClass: 'wow animated slideInDown slow',
         },
       ],
       productActiveIndex: 0,
@@ -402,9 +271,6 @@ export default {
       this.productActiveIndex = currentSlide
     },
 
-    openUrl() {
-      // window.open("http://new.elibot.cn/page/product/compound-robot/index.html");
-    },
     // async getCooperate() {
     //   const { data } = await getSecCatalogs(2, 2, 1)
     //   if (data.code === 200) {
