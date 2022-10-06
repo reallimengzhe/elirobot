@@ -14,10 +14,15 @@
         <div
           v-for="(item, index) in bannerList"
           :key="item.title"
-          class="the-index-banner-item"
+          class="the-index-banner-item column-center background_image-cover"
           :style="{ backgroundImage: 'url(' + item.src + ')' }"
         >
-          <h1>
+          <h1
+            :class="{
+              'animate__animated animate__fadeInDown animate__delay-500ms':
+                index === bannerActiveIndex,
+            }"
+          >
             {{ item.title }}
           </h1>
           <h5
@@ -46,7 +51,7 @@
         </div>
       </agile>
     </client-only>
-    <div class="the-index-product" key="product">
+    <div class="the-index-product">
       <client-only>
         <agile
           ref="productSlide"
@@ -60,9 +65,9 @@
           @after-change="onProductChange"
         >
           <div
-            class="the-index-product-slide-item"
             v-for="(item, index) in productList"
             :key="item.title"
+            class="the-index-product-slide-item"
             :style="{ backgroundImage: 'url(' + item.src + ')' }"
           >
             <h1
@@ -118,11 +123,11 @@
       <div class="the-index-product-thumbnails">
         <div
           v-for="(item, index) in productList"
+          :key="item.title"
           :class="[
             'the-index-product-thumbnails-item',
             { 'is-active': index === productActiveIndex },
           ]"
-          :key="item.title"
           @mouseenter="$refs.productSlide.goTo(index)"
         >
           <img :src="item.src" />
@@ -137,7 +142,7 @@
         </div>
       </div>
     </div>
-    <div class="the-index-case" key="case">
+    <div class="the-index-case">
       <div class="the-index-case-title">
         <h1>{{ $t('home.screen_3.case_title') }}</h1>
         <p>{{ $t('home.screen_3.case_des') }}</p>
@@ -190,23 +195,23 @@
         <img src="@/assets/images/common/triangle.svg" />
       </a>
     </div>
-    <div class="the-index-news" key="news">
+    <div class="the-index-news">
       <h1>{{ $t('home.screen_4.title') }}</h1>
       <h5>{{ $t('home.screen_4.des') }}</h5>
       <div class="the-index-news-content">
         <section
-          v-for="(newsItem, w) in newsList"
+          v-for="news in newsList"
+          :key="news.title"
           class="the-index-news-content-item"
-          :key="w"
         >
           <div
             class="the-index-news-content-item-img"
-            :style="{ backgroundImage: 'url(' + newsItem.src + ')' }"
+            :style="{ backgroundImage: 'url(' + news.src + ')' }"
           ></div>
-          <h2>{{ newsItem.title }}</h2>
-          <p>{{ newsItem.des }}</p>
+          <h2>{{ news.title }}</h2>
+          <p>{{ news.des }}</p>
 
-          <a :href="newsItem.link" class="link_primary">
+          <a :href="news.link" class="link_primary">
             <span class="gradient_text">
               {{ $t('home.screen_4.btn1_txt') }}
             </span>
@@ -448,14 +453,7 @@ export default {
       height: var(--height-part);
       box-sizing: border-box;
 
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-
       padding-left: 1.042rem;
-
-      background-position: center;
-      background-size: cover;
 
       position: relative;
       overflow: hidden;
