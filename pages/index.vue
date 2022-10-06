@@ -17,7 +17,7 @@
         :key="item.title"
         :style="{ backgroundImage: 'url(' + item.src + ')' }"
       >
-        <!-- <h1
+        <h1
           :class="{
             'animate__animated animate__fadeInDown animate__delay-500ms':
               index === bannerActiveIndex,
@@ -25,7 +25,7 @@
         >
           {{ item.title }}
         </h1>
-        <h5
+        <!-- <h5
           :class="{
             'animate__animated animate__fadeInDown animate__delay-1s':
               index === bannerActiveIndex,
@@ -33,7 +33,7 @@
         >
           {{ item.des }}
         </h5> -->
-        <div
+        <!-- <div
           :class="[
             'link_primary',
             {
@@ -47,7 +47,7 @@
           </span>
 
           <img src="@/assets/images/common/triangle.svg" />
-        </div>
+        </div> -->
       </div>
     </agile>
     <!-- 产品系列 -->
