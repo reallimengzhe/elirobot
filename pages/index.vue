@@ -3,7 +3,12 @@
     <!-- banner -->
     <agile
       class="the-index-banner"
-      :options="agileOptions"
+      :options="{
+        dots: false,
+        navButtons: false,
+        autoplay: true,
+        pauseOnHover: false,
+      }"
       @after-change="onBannerChange"
     >
       <div
@@ -28,7 +33,7 @@
         >
           {{ item.des }}
         </h5>
-        <h6
+        <div
           :class="[
             'link_primary',
             {
@@ -42,7 +47,7 @@
           </span>
 
           <img src="@/assets/images/common/triangle.svg" />
-        </h6>
+        </div>
       </div>
     </agile>
     <!-- 产品系列 -->
@@ -50,7 +55,12 @@
       <agile
         ref="productSlide"
         class="the-index-product-slide"
-        :options="agileOptions"
+        :options="{
+          dots: false,
+          navButtons: false,
+          autoplay: true,
+          pauseOnHover: true,
+        }"
         @after-change="onProductChange"
       >
         <div
@@ -91,7 +101,7 @@
           >
             {{ item.des }}
           </h5>
-          <h6
+          <div
             :class="[
               'link_primary',
               {
@@ -105,7 +115,7 @@
             </span>
 
             <img src="@/assets/images/common/triangle.svg" />
-          </h6>
+          </div>
         </div>
       </agile>
       <div class="the-index-product-thumbnails">
@@ -226,14 +236,6 @@ export default {
   asyncData() {},
   data() {
     return {
-      //
-      agileOptions: {
-        autoplay: true,
-        dots: false,
-        navButtons: false,
-        pauseOnHover: true,
-      },
-      cooperate: '',
       // banner 列表
       bannerList: [
         {
@@ -384,8 +386,6 @@ export default {
     if (process.client && !sessionStorage.getItem('autoLink')) {
       // this.autoLink()
     }
-    // this.getCooperate()
-    // this.getCase()
   },
   mounted() {},
   methods: {
@@ -397,18 +397,6 @@ export default {
       this.productActiveIndex = currentSlide
     },
 
-    // async getCooperate() {
-    //   const { data } = await getSecCatalogs(2, 2, 1)
-    //   if (data.code === 200) {
-    //     // console.log("think:" + data.data)
-    //     data.data.forEach(res => {
-    //       if (res.id === 102) {
-    //         this.cooperate = res
-    //         console.log(this.cooperate)
-    //       }
-    //     })
-    //   }
-    // },
     // async getCase() {
     //   const { data } = await getSecCatalogs(2)
 
