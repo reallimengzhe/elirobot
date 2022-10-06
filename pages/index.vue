@@ -33,7 +33,7 @@
         >
           {{ item.des }}
         </h5> -->
-        <!-- <div
+        <div
           :class="[
             'link_primary',
             {
@@ -47,7 +47,7 @@
           </span>
 
           <img src="@/assets/images/common/triangle.svg" />
-        </div> -->
+        </div>
       </div>
     </agile>
     <!-- 产品系列 -->
