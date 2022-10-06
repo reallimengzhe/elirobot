@@ -1,8 +1,6 @@
 export default {
   common: {
-    btn: {
-      search: 'Search',
-    },
+    search: 'Search',
     get_details: 'Get details',
     get_more: 'Get more',
   },

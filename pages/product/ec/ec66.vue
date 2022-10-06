@@ -16,27 +16,27 @@
       style="width: 100%"
     />
     <!-- 视频 -->
-    <agile
-      ref="video_slider"
-      class="ec66-videos"
-      :options="{
-        centerMode: true,
-        navButtons: false,
-        slidesToShow: 3,
-        dots: false,
-      }"
-      @after-change="onVideoChange"
-    >
-      <div
-        class="ec66-videos-item"
-        v-for="(video, index) in videos"
-        :key="video"
-        @click="$refs.video_slider.goTo(index)"
+    <client-only>
+      <agile
+        ref="video_slider"
+        class="ec66-videos"
+        :options="{
+          centerMode: true,
+          navButtons: false,
+          slidesToShow: 3,
+          dots: false,
+        }"
       >
-        <video :src="video" ref="video"></video>
-        <img src="@/assets/images/common/play.svg" @click="handlePlay" />
-      </div>
-    </agile>
+        <div
+          class="ec66-videos-item"
+          v-for="(video, index) in videos"
+          :key="video"
+          @click="$refs.video_slider.goTo(index)"
+        >
+          <VideoPlayer :src="video" ref="videoPlayer" />
+        </div>
+      </agile>
+    </client-only>
     <!-- 参数 -->
     <div class="ec66-params">
       <div class="ec66-params-thumbnails">
@@ -91,6 +91,7 @@
         </li>
       </div>
     </div>
+    <!-- 其他产品 -->
     <div class="ec66-brothers">
       <h1>您还可以看看</h1>
       <div class="ec66-brothers-content">
@@ -101,6 +102,7 @@
         </div>
       </div>
     </div>
+    <!-- 解决方案 -->
     <div class="ec66-solutions">
       <h1>定制机器人整体解决方案</h1>
       <p>
@@ -109,11 +111,11 @@
       <the-button>领取制定方案</the-button>
       <div class="ec66-solutions-videos">
         <div
-          class="ec66-solutions-videos-item"
           v-for="video in videos"
           :key="video"
+          class="ec66-solutions-videos-item"
         >
-          <video :src="video"></video>
+          <VideoPlayer :src="video" ref="videoPlayer" />
         </div>
       </div>
     </div>
@@ -121,7 +123,10 @@
 </template>
 
 <script>
+import VideoPlayer from '~/components/video-player.vue'
+
 export default {
+  components: { VideoPlayer },
   data() {
     return {
       features: [
@@ -209,20 +214,7 @@ export default {
   created() {
     this.currentProduct = this.products[0]
   },
-  methods: {
-    handlePlay($event) {
-      console.log($event.srcElement.previousElementSibling)
-      const videoEle = $event.srcElement.previousElementSibling
-      videoEle.play()
-    },
-    //
-    onVideoChange() {
-      console.log(this.$refs.video)
-      this.$refs.video.forEach(video => {
-        video.pause()
-      })
-    },
-  },
+  methods: {},
 }
 </script>
 
@@ -292,28 +284,10 @@ export default {
       position: relative;
       display: flex;
       align-items: center;
-      video {
-        width: 100%;
-      }
-
-      img {
-        display: none;
-
-        width: var(--length-100px);
-        height: var(--length-100px);
-
-        position: absolute;
-        right: var(--length-40px);
-        bottom: var(--length-40px);
-        cursor: pointer;
-      }
 
       &.agile__slide--active {
         transform: scale(1.5) !important;
         z-index: 1;
-        img {
-          display: block;
-        }
       }
     }
   }
@@ -370,6 +344,9 @@ export default {
           font-size: var(--font-size-20px);
           cursor: pointer;
           position: relative;
+          transition: font 225ms;
+          line-height: var(--font-size-48px);
+
           &.is-active {
             color: var(--color-blue);
             font-size: var(--font-size-32px);

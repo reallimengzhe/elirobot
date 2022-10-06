@@ -1,18 +1,18 @@
 <template>
   <div class="nav-product">
     <div
-      class="nav-product-series"
       v-for="series in seriesList"
       :key="series.series"
+      class="nav-product-series"
     >
       <nuxt-link class="nav-product-series-head" :to="series.path">
         <h1>{{ series.series }}</h1>
         <img :src="series.thumbnail" :alt="series.series" />
       </nuxt-link>
       <nuxt-link
-        class="nav-product-series-children"
         v-for="product in series.children"
         :key="product.name"
+        class="nav-product-series-children"
         :to="product.path"
       >
         <img :src="series.thumbnail" :alt="series.series" />
@@ -75,38 +75,38 @@ export default {
               name: 'CS63 六轴协作机器人',
               thumbnail:
                 'https://s3.bmp.ovh/imgs/2022/09/26/59d402f2da835d21.png',
-              path: '',
+              path: '/product/cs',
             },
             {
               name: 'CS66 六轴协作机器人',
               thumbnail:
                 'https://s3.bmp.ovh/imgs/2022/09/26/59d402f2da835d21.png',
-              path: '',
+              path: '/product/cs',
             },
             {
               name: 'CS612 六轴协作机器人',
               thumbnail:
                 'https://s3.bmp.ovh/imgs/2022/09/26/59d402f2da835d21.png',
-              path: '',
+              path: '/product/cs',
             },
           ],
         },
         {
           series: '复合机器人',
           thumbnail: 'https://s3.bmp.ovh/imgs/2022/09/26/59d402f2da835d21.png',
-          path: '/product/ec',
+          path: '/product/cr',
           children: [
             {
               name: 'ECR66 六轴协作机器人',
               thumbnail:
                 'https://s3.bmp.ovh/imgs/2022/09/26/59d402f2da835d21.png',
-              path: '',
+              path: '/product/cr',
             },
             {
               name: 'ECR612 六轴协作机器人',
               thumbnail:
                 'https://s3.bmp.ovh/imgs/2022/09/26/59d402f2da835d21.png',
-              path: '',
+              path: '/product/cr',
             },
           ],
         },

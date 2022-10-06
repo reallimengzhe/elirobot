@@ -111,9 +111,9 @@
       </p>
     </div>
     <div class="cs-video">
-      <video
+      <VideoPlayer
         src="https://terra-1-g.djicdn.com/851d20f7b9f64838a34cd02351370894/F31_HG306_shot-on_CLEAN__10s_V1_2400x1440.mp4"
-      ></video>
+      />
     </div>
     <!-- 对比 -->
     <div class="cs-compare">
@@ -206,7 +206,10 @@
 </template>
 
 <script>
+import VideoPlayer from '~/components/video-player.vue'
+
 export default {
+  components: { VideoPlayer },
   data() {
     return {
       // 特点

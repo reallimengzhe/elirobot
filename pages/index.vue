@@ -59,7 +59,7 @@
           :options="{
             dots: false,
             navButtons: false,
-            autoplay: true,
+            autoplay: false,
             pauseOnHover: true,
           }"
           @after-change="onProductChange"
@@ -67,7 +67,11 @@
           <div
             v-for="(item, index) in productList"
             :key="item.title"
-            class="the-index-product-slide-item"
+            class="
+              the-index-product-slide-item
+              column-center
+              background_image-cover
+            "
             :style="{ backgroundImage: 'url(' + item.src + ')' }"
           >
             <h1
@@ -483,22 +487,13 @@ export default {
       &-item {
         height: var(--height-part);
 
-        background-position: center;
-        background-size: cover;
-
         // padding-top: 1.74rem;
         padding-left: 1.042rem;
 
         box-sizing: border-box;
 
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-
         h1 {
-          width: 2rem;
           font-size: var(--font-size-48px);
-          // line-height: 0.35rem;
           margin-bottom: var(--font-size-24px);
         }
 

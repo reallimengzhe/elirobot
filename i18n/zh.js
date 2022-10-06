@@ -1,8 +1,6 @@
 export default {
   common: {
-    btn: {
-      search: '搜索',
-    },
+    search: '搜索',
     get_details: '了解详情',
     get_more: '查看更多',
     find_out_more: '了解更多',

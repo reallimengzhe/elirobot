@@ -19,11 +19,13 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    'animate.css/animate.min.css',
+    // 'vue-popperjs/dist/vue-popper.css',
+    // 'element-ui/lib/theme-chalk/index.css',
+
     '@/assets/styles/font.css',
     '@/assets/styles/reset.css',
     '@/assets/styles/common.scss',
-    'animate.css/animate.min.css',
-    // 'element-ui/lib/theme-chalk/index.css',
     '@/assets/styles/variables.css',
   ],
 
@@ -34,6 +36,7 @@ export default {
 
     { src: '@/plugins/flexible', mode: 'client' },
     { src: '@/plugins/vue-agile', mode: 'client' },
+    { src: '@/plugins/vue-popper' },
     { src: '@/plugins/svg-icon' },
   ],
 

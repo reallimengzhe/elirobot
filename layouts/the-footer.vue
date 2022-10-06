@@ -12,42 +12,25 @@
           <span>关注我们</span>
           <popper :options="popperOptions">
             <img src="@/assets/images/footer/qr_wechat.png" alt="wechat" />
-
-            <img
-              slot="reference"
-              src="@/assets/images/footer/ic_wechat.svg"
-              alt="wechat"
-            />
+            <svg-icon slot="reference" icon="wechat"></svg-icon>
           </popper>
           <popper :options="popperOptions">
             <img
               src="@/assets/images/footer/qr_xiaochengxu.png"
               alt="xiaochengxu"
             />
-            <img
-              slot="reference"
-              src="@/assets/images/footer/ic_xiaochengxu.svg"
-              alt="xiaochengxu"
-            />
+            <svg-icon slot="reference" icon="xiaochengxu"></svg-icon>
           </popper>
           <popper :options="popperOptions">
             <img
               src="@/assets/images/footer/qr_shipinhao.png"
               alt="shipinhao"
             />
-            <img
-              slot="reference"
-              src="@/assets/images/footer/ic_shipinhao.svg"
-              alt="shipinhao"
-            />
+            <svg-icon slot="reference" icon="shipinhao"></svg-icon>
           </popper>
           <popper :options="popperOptions">
             <img src="@/assets/images/footer/qr_douyin.png" alt="douyin" />
-            <img
-              slot="reference"
-              src="@/assets/images/footer/ic_douyin.svg"
-              alt="douyin"
-            />
+            <svg-icon slot="reference" icon="tiktok"></svg-icon>
           </popper>
         </h5>
       </div>
@@ -78,14 +61,8 @@
 </template>
 
 <script>
-import Popper from 'vue-popperjs'
-import 'vue-popperjs/dist/vue-popper.css'
-
 export default {
-  name: 'the-footer',
-  components: {
-    popper: Popper,
-  },
+  name: 'TheFooter',
   data() {
     return {
       popperOptions: {
@@ -139,7 +116,7 @@ export default {
   &-icons {
     display: flex;
     align-items: center;
-    img {
+    span + span {
       margin-left: 0.104rem;
     }
   }
