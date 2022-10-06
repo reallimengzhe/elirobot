@@ -1,15 +1,14 @@
-<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="Frame" clip-path="url(#clip0_2519_7478)">
-<g id="Group 269">
-<path id="Vector" d="M82.0589 27.0594L72.7234 14.9902H27.279L17.915 27.0594" stroke="white" stroke-width="6.25" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="Vector_2" d="M16.8379 29.7296C16.8379 27.6946 18.4876 26.0449 20.5226 26.0449H79.4776C81.5127 26.0449 83.1623 27.6946 83.1623 29.7296V79.4729C83.1623 82.5255 80.6879 85 77.6353 85H22.3649C19.3124 85 16.8379 82.5255 16.8379 79.4729V29.7296Z" stroke="white" stroke-width="6.25" stroke-linejoin="round"/>
-<path id="Vector_3" d="M64.7402 55.5254L50.0015 70.2642L35.2627 55.5254" stroke="white" stroke-width="6.25" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="Vector_4" d="M49.9834 40.791V70.2685" stroke="white" stroke-width="6.25" stroke-linecap="round" stroke-linejoin="round"/>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+<g>
+	<path d="M95.4,17.6c0,0-0.1-0.1-0.1-0.1L83,1.6c-0.8-1-2-1.6-3.2-1.6H20.2c-1.3,0-2.5,0.6-3.2,1.6L4.7,17.4
+		c-0.1,0.1-0.1,0.2-0.2,0.3c-1.3,1.6-2.1,3.6-2.1,5.7v65.2c0,6.3,5.1,11.3,11.3,11.3h72.5c6.3,0,11.3-5.1,11.3-11.3V23.4
+		C97.6,21.2,96.7,19.1,95.4,17.6z M22.2,8.2h55.6l4.9,6.3H17.3L22.2,8.2z M89.4,88.6c0,1.7-1.4,3.2-3.1,3.2H13.8
+		c-1.7,0-3.1-1.4-3.1-3.2V23.4c0-0.4,0.3-0.7,0.7-0.7h77.3c0.4,0,0.7,0.3,0.7,0.7V88.6z"/>
+	<path d="M66.4,54.3L54.1,66.7V37.9c0-2.3-1.8-4.1-4.1-4.1c-2.3,0-4.1,1.8-4.1,4.1v28.7L33.6,54.3c-1.6-1.6-4.2-1.6-5.8,0
+		c-1.6,1.6-1.6,4.2,0,5.8l19.2,19.2c0.7,0.8,1.8,1.4,3,1.4c0.3,0,0.7-0.1,1-0.1c0.7-0.2,1.4-0.5,1.9-1.1l19.3-19.3
+		c1.6-1.6,1.6-4.2,0-5.8C70.6,52.7,68,52.7,66.4,54.3z"/>
 </g>
-</g>
-<defs>
-<clipPath id="clip0_2519_7478">
-<rect width="100" height="100" fill="white"/>
-</clipPath>
-</defs>
 </svg>

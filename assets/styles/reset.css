@@ -67,3 +67,13 @@ a,
 button {
   cursor: pointer;
 }
+
+/* 其他 */
+.agile__nav-button {
+  width: 0.417rem;
+  height: 0.291rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

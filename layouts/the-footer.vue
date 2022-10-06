@@ -91,7 +91,7 @@ export default {
 
     padding-bottom: 0.104rem;
 
-    border-bottom: 1px solid rgba($color: #fff, $alpha: 0.2);
+    border-bottom: 0.005rem solid rgba($color: #fff, $alpha: 0.2);
 
     margin-bottom: 0.104rem;
   }

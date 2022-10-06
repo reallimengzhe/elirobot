@@ -619,7 +619,7 @@ export default {}
     /* width: 432px; */
     width: 28%;
     padding-bottom: 18px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.45);
+    border-bottom: 0.005rem solid rgba(255, 255, 255, 0.45);
   }
 
   .m .screen1__box--2 {
@@ -1093,7 +1093,7 @@ export default {}
 
   .is-open .case-box__title {
     padding-bottom: 0.2rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    border-bottom: 0.005rem solid rgba(255, 255, 255, 0.06);
   }
 
   .is-open .case-box__content {

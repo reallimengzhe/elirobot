@@ -1,14 +1,9 @@
-<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="Frame" clip-path="url(#clip0_2519_7467)">
-<path id="Vector" d="M12.5 50H37.5V75H12.5V50Z" stroke="white" stroke-width="6.25" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="Vector_2" d="M62.5 50H87.5V75H62.5V50Z" stroke="white" stroke-width="6.25" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="Vector_3" d="M12.5 25H37.5V50H12.5V25Z" stroke="white" stroke-width="6.25" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="Vector_4" d="M37.5 25H62.5V50H37.5V25Z" stroke="white" stroke-width="6.25" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="Vector_5" d="M62.5 25H87.5V50H62.5V25Z" stroke="white" stroke-width="6.25" stroke-linecap="round" stroke-linejoin="round"/>
-</g>
-<defs>
-<clipPath id="clip0_2519_7467">
-<rect width="100" height="100" fill="white"/>
-</clipPath>
-</defs>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+<path d="M96.2,15.4H65.4H34.6H3.8c-2.1,0-3.8,1.7-3.8,3.8V50v30.8c0,2.1,1.7,3.8,3.8,3.8h30.8c2.1,0,3.8-1.7,3.8-3.8V53.8h23.1v26.9
+	c0,2.1,1.7,3.8,3.8,3.8h30.8c2.1,0,3.8-1.7,3.8-3.8V50V19.2C100,17.1,98.3,15.4,96.2,15.4z M92.3,46.2H69.2V23.1h23.1V46.2z
+	 M7.7,23.1h23.1v23.1H7.7V23.1z M30.8,76.9H7.7V53.8h23.1V76.9z M38.5,23.1h23.1v23.1H38.5V23.1z M92.3,76.9H69.2V53.8h23.1V76.9z"
+	/>
 </svg>

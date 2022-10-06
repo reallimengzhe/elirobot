@@ -6,25 +6,8 @@
 }
 
 .gradient_border {
-  border: 1px solid transparent;
+  border: 0.005rem solid transparent;
   border-image: linear-gradient(90deg, #0083ff, #00d1ff) 1 1 !important;
-}
-
-.button_primary {
-  @extend .gradient_border;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: none;
-  padding: var(--font-size-12px) 0;
-
-  cursor: pointer;
-
-  span {
-    margin-right: 0.0625rem;
-    font-size: var(--font-size-14px);
-  }
 }
 
 .link_primary {

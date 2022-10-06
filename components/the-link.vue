@@ -1,8 +1,8 @@
 <template>
-  <button class="the-button gradient_border">
+  <div class="the-link">
     <span class="gradient_text"><slot /></span>
     <img src="@/assets/images/common/triangle.svg" />
-  </button>
+  </div>
 </template>
 
 <script>
@@ -10,12 +10,10 @@ export default {}
 </script>
 
 <style lang="scss">
-.the-button {
+.the-link {
   display: flex;
   align-items: center;
-  justify-content: center;
-  background: none;
-  padding: var(--font-size-12px) var(--font-size-24px);
+  cursor: pointer;
 
   span {
     margin-right: 0.0625rem;

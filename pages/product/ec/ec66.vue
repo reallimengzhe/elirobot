@@ -28,12 +28,12 @@
         }"
       >
         <div
-          class="ec66-videos-item"
           v-for="(video, index) in videos"
           :key="video"
+          class="ec66-videos-item"
           @click="$refs.video_slider.goTo(index)"
         >
-          <VideoPlayer :src="video" ref="videoPlayer" />
+          <VideoPlayer :src="video" />
         </div>
       </agile>
     </client-only>
@@ -60,16 +60,17 @@
             :key="title"
             :class="{ 'is-active': currentTitle === title }"
             @click="currentTitle = title"
-            >{{ title }}</span
           >
+            {{ title }}
+          </span>
         </h2>
         <h3><span>名称</span><span>参数</span></h3>
         <li>
           <span>自由度</span><span>{{ currentProduct.features.ziyoudu }}</span>
         </li>
         <li>
-          <span>重复定位精度</span
-          ><span>{{ currentProduct.features.jingdu }}</span>
+          <span>重复定位精度</span>
+          <span>{{ currentProduct.features.jingdu }}</span>
         </li>
         <li>
           <span>重量</span><span>{{ currentProduct.features.zhongliang }}</span>
@@ -78,16 +79,16 @@
           <span>负载</span><span>{{ currentProduct.features.fuzai }}</span>
         </li>
         <li>
-          <span>工作半径</span
-          ><span>{{ currentProduct.features.banjing }}</span>
+          <span>工作半径</span>
+          <span>{{ currentProduct.features.banjing }}</span>
         </li>
         <li>
-          <span>典型功耗</span
-          ><span>{{ currentProduct.features.gonghao }}</span>
+          <span>典型功耗</span>
+          <span>{{ currentProduct.features.gonghao }}</span>
         </li>
         <li>
-          <span>工具最大速度</span
-          ><span>{{ currentProduct.features.sudu }}</span>
+          <span>工具最大速度</span>
+          <span>{{ currentProduct.features.sudu }}</span>
         </li>
       </div>
     </div>
@@ -115,7 +116,7 @@
           :key="video"
           class="ec66-solutions-videos-item"
         >
-          <VideoPlayer :src="video" ref="videoPlayer" />
+          <VideoPlayer :src="video" />
         </div>
       </div>
     </div>
@@ -123,10 +124,7 @@
 </template>
 
 <script>
-import VideoPlayer from '~/components/video-player.vue'
-
 export default {
-  components: { VideoPlayer },
   data() {
     return {
       features: [
@@ -305,7 +303,7 @@ export default {
         height: 0.77rem;
         box-sizing: border-box;
 
-        border: 1px solid rgba(0, 8, 22, 0.1);
+        border: 0.005rem solid rgba(0, 8, 22, 0.1);
         margin-bottom: 0.26rem;
 
         img {
@@ -357,7 +355,7 @@ export default {
             &::before {
               content: '';
               display: block;
-              width: 1px;
+              width: 0.005rem;
               height: var(--font-size-20px);
               background-color: #e1e1e1;
               position: absolute;
@@ -379,7 +377,7 @@ export default {
         }
         span:last-child {
           width: 2.421875rem;
-          border-left: 1px solid white;
+          border-left: 0.005rem solid white;
         }
       }
       h3 {

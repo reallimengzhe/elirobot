@@ -145,7 +145,7 @@ export default {
   }
   &-divider {
     width: 100%;
-    height: 1px;
+    height: 0.005rem;
     background-color: #e1e1e1;
     margin: var(--length-40px) 0;
   }

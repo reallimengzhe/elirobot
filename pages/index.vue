@@ -33,21 +33,16 @@
           >
             {{ item.des }}
           </h5>
-          <div
+          <the-link
             :class="[
-              'link_primary',
               {
                 'animate__animated animate__fadeInDown animate__delay-1500ms':
                   index === bannerActiveIndex,
               },
             ]"
           >
-            <span class="gradient_text">
-              {{ $t('common.get_details') }}
-            </span>
-
-            <img src="@/assets/images/common/triangle.svg" />
-          </div>
+            {{ $t('common.get_details') }}
+          </the-link>
         </div>
       </agile>
     </client-only>
@@ -106,21 +101,16 @@
             >
               {{ item.des }}
             </h5>
-            <div
+            <the-link
               :class="[
-                'link_primary',
                 {
                   'animate__animated animate__fadeInDown animate__delay-1s':
                     productActiveIndex === index,
                 },
               ]"
             >
-              <span class="gradient_text">
-                {{ $t('common.get_details') }}
-              </span>
-
-              <img src="@/assets/images/common/triangle.svg" />
-            </div>
+              {{ $t('common.get_details') }}
+            </the-link>
           </div>
         </agile>
       </client-only>
@@ -148,8 +138,8 @@
     </div>
     <div class="the-index-case">
       <div class="the-index-case-title">
-        <h1>{{ $t('home.screen_3.case_title') }}</h1>
-        <p>{{ $t('home.screen_3.case_des') }}</p>
+        <h1>{{ $t('case.title') }}</h1>
+        <p>{{ $t('case.des') }}</p>
       </div>
       <div class="the-index-case-content">
         <div
@@ -173,21 +163,13 @@
               {{ k }}
             </p>
 
-            <a class="link_primary">
-              <span class="gradient_text">
-                {{ $t('common.get_details') }}
-              </span>
+            <the-link>
+              {{ $t('common.get_details') }}
+            </the-link>
 
-              <img src="@/assets/images/common/triangle.svg" />
-            </a>
-
-            <button class="button_primary">
-              <span class="gradient_text">
-                {{ $t('common.get_more') }}
-              </span>
-
-              <img src="@/assets/images/common/triangle.svg" />
-            </button>
+            <the-button>
+              {{ $t('common.get_more') }}
+            </the-button>
           </div>
         </div>
       </div>
@@ -200,8 +182,8 @@
       </a>
     </div>
     <div class="the-index-news">
-      <h1>{{ $t('home.screen_4.title') }}</h1>
-      <h5>{{ $t('home.screen_4.des') }}</h5>
+      <h1>{{ $t('news.title') }}</h1>
+      <h5>{{ $t('news.des') }}</h5>
       <div class="the-index-news-content">
         <section
           v-for="news in newsList"
@@ -215,22 +197,14 @@
           <h2>{{ news.title }}</h2>
           <p>{{ news.des }}</p>
 
-          <a :href="news.link" class="link_primary">
-            <span class="gradient_text">
-              {{ $t('home.screen_4.btn1_txt') }}
-            </span>
-
-            <img src="@/assets/images/common/triangle.svg" />
-          </a>
+          <the-link>
+            {{ $t('news.read_full_article') }}
+          </the-link>
         </section>
       </div>
-      <button class="the-index-news-button button_primary">
-        <span class="gradient_text">
-          {{ $t('common.get_more') }}
-        </span>
-
-        <img src="@/assets/images/common/triangle.svg" />
-      </button>
+      <the-button>
+        {{ $t('common.get_more') }}
+      </the-button>
     </div>
   </div>
 </template>
@@ -446,6 +420,7 @@ export default {
 .the-index {
   // --height-part: calc(100vh - 60px);
   --height-part: 5rem;
+  background-color: var(--color-main-bg);
 
   &-banner {
     width: 100%;
@@ -533,7 +508,7 @@ export default {
         // justify-content: center;
         align-items: center;
 
-        border: 1px solid transparent;
+        border: 0.005rem solid transparent;
         border-bottom-color: rgba(255, 255, 255, 0.24);
 
         &:hover,
@@ -600,7 +575,7 @@ export default {
 
       button {
         position: absolute;
-        right: 100px;
+        right: var(--length-100px);
         width: 0.72917rem;
         height: 0.20833rem;
         border: 0.00520833rem solid;
@@ -681,7 +656,7 @@ export default {
             font-size: var(--font-size-14px);
             line-height: var(--font-size-32px);
 
-            border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+            border-bottom: 0.005rem solid rgba(255, 255, 255, 0.4);
 
             &:nth-last-of-type(1) {
               margin-bottom: var(--font-size-20px);
@@ -689,12 +664,8 @@ export default {
           }
 
           button {
-            width: 140px;
-            height: 32px;
             background-color: rgba(255, 255, 255, 0.12);
             border: none;
-
-            justify-content: center;
           }
 
           > img:nth-child(2),
@@ -721,7 +692,7 @@ export default {
             }
 
             > img:nth-child(1),
-            a {
+            .the-link {
               display: none;
             }
 
@@ -819,13 +790,10 @@ export default {
       }
     }
 
-    &-button {
+    button {
       margin-left: auto;
-      width: 0.72917rem;
-      height: 0.20833rem;
-      border-width: 1px;
+      // border-width: 0.005rem;
       background-color: rgba(0, 8, 22, 0.48);
-      justify-content: center;
     }
   }
 }

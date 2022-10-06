@@ -19,37 +19,35 @@
           <svg-icon icon="arrow_down"></svg-icon>
         </a>
 
-        <button class="button_primary">
-          <span class="gradient_text">下载艾利特产品目录</span>
-          <img src="@/assets/images/common/triangle.svg" />
-        </button>
+        <the-button>下载艾利特产品目录</the-button>
       </div>
-
-      <agile
-        class="ec-masterpiece-slide"
-        :options="{
-          dots: false,
-          autoplay: false,
-          navButtons: true,
-          pauseOnHover: false,
-        }"
-      >
-        <div
-          v-for="product in masterpieces"
-          :key="product.name"
-          class="ec-masterpiece-slide-item"
+      <client-only>
+        <agile
+          class="ec-masterpiece-slide"
+          :options="{
+            dots: false,
+            autoplay: false,
+            navButtons: true,
+            pauseOnHover: false,
+          }"
         >
-          <img :src="product.img" :alt="product.name" />
-          <span>{{ product.name }}</span>
-        </div>
+          <div
+            v-for="product in masterpieces"
+            :key="product.name"
+            class="ec-masterpiece-slide-item"
+          >
+            <img :src="product.img" :alt="product.name" />
+            <span>{{ product.name }}</span>
+          </div>
 
-        <template slot="prevButton">
-          <svg-icon icon="arrow_left"></svg-icon>
-        </template>
-        <template slot="nextButton">
-          <svg-icon icon="arrow_right"></svg-icon>
-        </template>
-      </agile>
+          <template slot="prevButton">
+            <svg-icon icon="arrow_left"></svg-icon>
+          </template>
+          <template slot="nextButton">
+            <svg-icon icon="arrow_right"></svg-icon>
+          </template>
+        </agile>
+      </client-only>
     </div>
 
     <div class="ec-trait">
@@ -67,28 +65,30 @@
       </h1>
       <p>通过比较看看哪一款ELITE机器人更适合您的场景</p>
 
-      <agile :options="options2" class="ec-compare-products">
-        <div
-          v-for="product in products"
-          :key="product.name"
-          :class="['ec-compare-products-item']"
-        >
+      <client-only>
+        <agile :options="options2" class="ec-compare-products">
           <div
-            @click="product.checked = !product.checked"
-            :class="[{ 'is-active': product.checked }]"
+            v-for="product in products"
+            :key="product.name"
+            :class="['ec-compare-products-item']"
           >
-            <svg-icon icon="close" v-if="product.checked"></svg-icon>
-            <h1>{{ product.name }}</h1>
-            <img :src="product.img" :alt="product.name" />
+            <div
+              :class="[{ 'is-active': product.checked }]"
+              @click="product.checked = !product.checked"
+            >
+              <svg-icon v-if="product.checked" icon="close"></svg-icon>
+              <h1>{{ product.name }}</h1>
+              <img :src="product.img" :alt="product.name" />
+            </div>
           </div>
-        </div>
-        <template slot="prevButton">
-          <svg-icon icon="arrow_left"></svg-icon>
-        </template>
-        <template slot="nextButton">
-          <svg-icon icon="arrow_right"></svg-icon>
-        </template>
-      </agile>
+          <template slot="prevButton">
+            <svg-icon icon="arrow_left"></svg-icon>
+          </template>
+          <template slot="nextButton">
+            <svg-icon icon="arrow_right"></svg-icon>
+          </template>
+        </agile>
+      </client-only>
       <transition-group
         tag="div"
         name="list"
@@ -99,7 +99,7 @@
             : '0',
         }"
       >
-        <div class="ec-compare-specification-item" key="title">
+        <div key="title" class="ec-compare-specification-item">
           <h1></h1>
           <p>工作半径</p>
           <p>负重</p>
@@ -384,6 +384,8 @@ export default {
           display: flex;
           justify-content: center;
           align-items: center;
+
+          color: white;
           &--prev {
             left: 0;
           }
@@ -462,7 +464,7 @@ export default {
           font-size: var(--font-size-16px);
           cursor: pointer;
           position: relative;
-          border: 1px solid transparent;
+          border: 0.005rem solid transparent;
           &.is-active {
             border-color: rgba(255, 255, 255, 0.24);
             background-color: rgba(255, 255, 255, 0.12);
@@ -493,26 +495,19 @@ export default {
       }
 
       .agile__nav-button {
-        width: 0.417rem;
-        height: 0.291rem;
         background: rgba(255, 255, 255, 0.08);
         position: absolute;
         top: 0;
         bottom: 0;
         margin: auto;
 
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        color: white;
 
         &--prev {
           left: -0.46875rem;
         }
         &--next {
           right: -0.46875rem;
-        }
-        img {
-          height: var(--font-size-20px);
         }
       }
     }
@@ -538,13 +533,13 @@ export default {
           font-size: var(--font-size-48px);
           line-height: 0.667rem;
           text-align: center;
-          border-bottom: 1px solid rgba(255, 255, 255, 0.24);
+          border-bottom: 0.005rem solid rgba(255, 255, 255, 0.24);
         }
         p {
           font-size: var(--font-size-20px);
           line-height: 0.4375rem;
           text-align: center;
-          border-bottom: 1px solid rgba(255, 255, 255, 0.24);
+          border-bottom: 0.005rem solid rgba(255, 255, 255, 0.24);
         }
 
         button {

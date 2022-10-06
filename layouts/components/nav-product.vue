@@ -130,7 +130,7 @@ export default {
 
     padding-right: var(--length-40px);
 
-    border-right: 1px solid #f3f5f8;
+    border-right: 0.005rem solid #f3f5f8;
 
     margin-right: var(--length-40px);
 

@@ -9,8 +9,9 @@
       </h2>
       <the-button
         class="animate__animated animate__fadeInDown animate__delay-1s"
-        >体验样机</the-button
       >
+        体验样机
+      </the-button>
     </header>
     <!-- 介绍 -->
     <div class="cs-intro column-center background_image-cover">
@@ -89,9 +90,9 @@
     <div class="cs-console">
       <div class="cs-console-feat">
         <div
-          class="cs-console-feat-item column-center"
           v-for="feat in consoleFeats"
           :key="feat.name"
+          class="cs-console-feat-item column-center"
         >
           <h2>{{ feat.name }}</h2>
           <p v-if="feat.desc">{{ feat.desc }}</p>
@@ -122,29 +123,39 @@
         挑选适合您的协作机器人手臂吧！
       </h1>
       <p>通过比较看看哪一款ELITE机器人更适合您的场景</p>
-
-      <agile :options="options2" class="cs-compare-products">
-        <div
-          v-for="product in products"
-          :key="product.name"
-          :class="['cs-compare-products-item']"
+      <client-only>
+        <agile
+          :options="{
+            autoplay: false,
+            centerMode: true,
+            dots: false,
+            navButtons: true,
+            slidesToShow: 4,
+          }"
+          class="cs-compare-products"
         >
           <div
-            @click="product.checked = !product.checked"
-            :class="[{ 'is-active': product.checked }]"
+            v-for="product in products"
+            :key="product.name"
+            :class="['cs-compare-products-item']"
           >
-            <svg-icon icon="close" v-if="product.checked"></svg-icon>
-            <h1>{{ product.name }}</h1>
-            <img :src="product.img" :alt="product.name" />
+            <div
+              :class="[{ 'is-active': product.checked }]"
+              @click="product.checked = !product.checked"
+            >
+              <svg-icon v-if="product.checked" icon="close"></svg-icon>
+              <h1>{{ product.name }}</h1>
+              <img :src="product.img" :alt="product.name" />
+            </div>
           </div>
-        </div>
-        <template slot="prevButton">
-          <svg-icon icon="arrow_left"></svg-icon>
-        </template>
-        <template slot="nextButton">
-          <svg-icon icon="arrow_right"></svg-icon>
-        </template>
-      </agile>
+          <template slot="prevButton">
+            <svg-icon icon="arrow_left"></svg-icon>
+          </template>
+          <template slot="nextButton">
+            <svg-icon icon="arrow_right"></svg-icon>
+          </template>
+        </agile>
+      </client-only>
       <transition-group
         tag="div"
         name="list"
@@ -155,7 +166,7 @@
             : '0',
         }"
       >
-        <div class="cs-compare-specification-item" key="title">
+        <div key="title" class="cs-compare-specification-item">
           <h1></h1>
           <p>工作半径</p>
           <p>负重</p>
@@ -206,10 +217,7 @@
 </template>
 
 <script>
-import VideoPlayer from '~/components/video-player.vue'
-
 export default {
-  components: { VideoPlayer },
   data() {
     return {
       // 特点
@@ -330,14 +338,6 @@ export default {
         },
       ],
 
-      options2: {
-        autoplay: false,
-        centerMode: true,
-        dots: false,
-        navButtons: true,
-        slidesToShow: 4,
-      },
-
       brothers: [
         {
           name: '全新CS系列协作机器人',
@@ -444,7 +444,7 @@ export default {
       width: 1.822rem;
       height: 2.604rem;
       backdrop-filter: blur(20px);
-      border: 1px solid rgba(255, 255, 255, 0.24);
+      border: 0.005rem solid rgba(255, 255, 255, 0.24);
       box-sizing: border-box;
       padding-top: var(--font-size-32px);
 
@@ -498,7 +498,7 @@ export default {
       justify-content: space-between;
       margin-bottom: var(--length-80px);
       &-item {
-        border: 1px solid rgba(255, 255, 255, 0.24);
+        border: 0.005rem solid rgba(255, 255, 255, 0.24);
         padding: 0 0.458rem;
         height: 0.667rem;
         text-align: center;
@@ -555,7 +555,7 @@ export default {
       &-item {
         width: 2.5rem;
         height: 1.167rem;
-        border: 1px solid rgba(255, 255, 255, 0.24);
+        border: 0.005rem solid rgba(255, 255, 255, 0.24);
         box-sizing: border-box;
         padding: 0 var(--length-80px);
         text-align: center;
@@ -636,7 +636,8 @@ export default {
           font-size: var(--font-size-16px);
           cursor: pointer;
           position: relative;
-          border: 1px solid transparent;
+          border: 0.005rem solid transparent;
+
           &.is-active {
             border-color: rgba(255, 255, 255, 0.24);
             background-color: rgba(255, 255, 255, 0.12);
@@ -667,26 +668,19 @@ export default {
       }
 
       .agile__nav-button {
-        width: 0.417rem;
-        height: 0.291rem;
         background: rgba(255, 255, 255, 0.08);
         position: absolute;
         top: 0;
         bottom: 0;
         margin: auto;
 
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        color: white;
 
         &--prev {
           left: -0.46875rem;
         }
         &--next {
           right: -0.46875rem;
-        }
-        img {
-          height: var(--font-size-20px);
         }
       }
     }
@@ -712,13 +706,13 @@ export default {
           font-size: var(--font-size-48px);
           line-height: 0.667rem;
           text-align: center;
-          border-bottom: 1px solid rgba(255, 255, 255, 0.24);
+          border-bottom: 0.005rem solid rgba(255, 255, 255, 0.24);
         }
         p {
           font-size: var(--font-size-20px);
           line-height: 0.4375rem;
           text-align: center;
-          border-bottom: 1px solid rgba(255, 255, 255, 0.24);
+          border-bottom: 0.005rem solid rgba(255, 255, 255, 0.24);
         }
 
         button {
