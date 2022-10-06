@@ -17,37 +17,19 @@
         :key="item.title"
         :style="{ backgroundImage: 'url(' + item.src + ')' }"
       >
-        <!-- <h1
-          :class="{
-            'animate__animated animate__fadeInDown animate__delay-500ms':
-              index === bannerActiveIndex,
-          }"
-        >
+        <h1 :class="{}">
           {{ item.title }}
         </h1>
-        <h5
-          :class="{
-            'animate__animated animate__fadeInDown animate__delay-1s':
-              index === bannerActiveIndex,
-          }"
-        >
+        <h5 :class="{}">
           {{ item.des }}
         </h5>
-        <div
-          :class="[
-            'link_primary',
-            {
-              'animate__animated animate__fadeInDown animate__delay-1500ms':
-                index === bannerActiveIndex,
-            },
-          ]"
-        >
+        <div :class="['link_primary', {}]">
           <span class="gradient_text">
             {{ $t('common.get_details') }}
           </span>
 
           <img src="@/assets/images/common/triangle.svg" />
-        </div> -->
+        </div>
       </div>
     </agile>
     <!-- 产品系列 -->
@@ -69,53 +51,25 @@
           :key="item.title"
           :style="{ backgroundImage: 'url(' + item.src + ')' }"
         >
-          <!-- <h1
-            :class="{
-              'animate__animated animate__fadeInDown':
-                productActiveIndex === index,
-            }"
-          >
+          <h1 :class="{}">
             {{ item.title }}
           </h1>
-          <h1
-            :class="{
-              'animate__animated animate__fadeInDown':
-                productActiveIndex === index,
-            }"
-          >
+          <h1 :class="{}">
             {{ item.title1 }}
           </h1>
-          <h3
-            :class="{
-              'animate__animated animate__fadeInDown animate__delay-500ms':
-                productActiveIndex === index,
-            }"
-          >
+          <h3 :class="{}">
             {{ item.title2 }}
           </h3>
-          <h5
-            :class="{
-              'animate__animated animate__fadeInDown animate__delay-500ms':
-                productActiveIndex === index,
-            }"
-          >
+          <h5 :class="{}">
             {{ item.des }}
           </h5>
-          <div
-            :class="[
-              'link_primary',
-              {
-                'animate__animated animate__fadeInDown animate__delay-1s':
-                  productActiveIndex === index,
-              },
-            ]"
-          >
+          <div :class="['link_primary', {}]">
             <span class="gradient_text">
               {{ $t('common.get_details') }}
             </span>
 
             <img src="@/assets/images/common/triangle.svg" />
-          </div> -->
+          </div>
         </div>
       </agile>
       <div class="the-index-product-thumbnails">
