@@ -17,9 +17,11 @@ module.exports = {
     'comma-dangle': 0, // 逗号
     'space-before-function-paren': 0,
     'no-unused-vars': 1, // 未使用的变量
+    'vue/no-unused-vars': 1, // 未使用的变量
     'arrow-parens': 0, // 箭头函数的括号
     'eol-last': 0, // 最后空一行
     quotes: 1,
     'no-trailing-spaces': 1,
+    'vue/html-self-closing': 0, // 自闭和标签 <img />
   },
 }

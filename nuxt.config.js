@@ -32,9 +32,9 @@ export default {
     // '@/plugins/element-ui',
     // { src: '@/plugins/swiper', mode: 'client' },
 
-    { src: '@/plugins/vue-agile', mode: 'client' },
     { src: '@/plugins/flexible', mode: 'client' },
-    { src: '@/plugins/svg-icon', ssr: true },
+    { src: '@/plugins/vue-agile', mode: 'client' },
+    { src: '@/plugins/svg-icon' },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

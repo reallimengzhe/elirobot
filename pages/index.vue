@@ -1,107 +1,39 @@
 <template>
   <div class="the-index">
-    <!-- banner -->
-    <agile
-      class="the-index-banner"
-      :options="{
-        dots: false,
-        navButtons: false,
-        autoplay: true,
-        pauseOnHover: false,
-      }"
-      @after-change="onBannerChange"
-    >
-      <div
-        v-for="(item, index) in bannerList"
-        class="the-index-banner-item"
-        :key="item.title"
-        :style="{ backgroundImage: 'url(' + item.src + ')' }"
-      >
-        <h1>
-          {{ item.title }}
-        </h1>
-        <!-- <h5
-          :class="{
-            'animate__animated animate__fadeInDown animate__delay-1s':
-              index === bannerActiveIndex,
-          }"
-        >
-          {{ item.des }}
-        </h5> -->
-        <!-- <div
-          :class="[
-            'link_primary',
-            {
-              'animate__animated animate__fadeInDown animate__delay-1500ms':
-                index === bannerActiveIndex,
-            },
-          ]"
-        >
-          <span class="gradient_text">
-            {{ $t('common.get_details') }}
-          </span>
-
-          <img src="@/assets/images/common/triangle.svg" />
-        </div> -->
-      </div>
-    </agile>
-    <!-- 产品系列 -->
-    <div class="the-index-product">
+    <client-only>
       <agile
-        ref="productSlide"
-        class="the-index-product-slide"
+        class="the-index-banner"
         :options="{
           dots: false,
           navButtons: false,
           autoplay: true,
-          pauseOnHover: true,
+          pauseOnHover: false,
         }"
-        @after-change="onProductChange"
+        @after-change="onBannerChange"
       >
         <div
-          class="the-index-product-slide-item"
-          v-for="(item, index) in productList"
+          v-for="(item, index) in bannerList"
           :key="item.title"
+          class="the-index-banner-item"
           :style="{ backgroundImage: 'url(' + item.src + ')' }"
         >
-          <!-- <h1
-            :class="{
-              'animate__animated animate__fadeInDown':
-                productActiveIndex === index,
-            }"
-          >
+          <h1>
             {{ item.title }}
           </h1>
-          <h1
-            :class="{
-              'animate__animated animate__fadeInDown':
-                productActiveIndex === index,
-            }"
-          >
-            {{ item.title1 }}
-          </h1>
-          <h3
-            :class="{
-              'animate__animated animate__fadeInDown animate__delay-500ms':
-                productActiveIndex === index,
-            }"
-          >
-            {{ item.title2 }}
-          </h3>
           <h5
             :class="{
-              'animate__animated animate__fadeInDown animate__delay-500ms':
-                productActiveIndex === index,
+              'animate__animated animate__fadeInDown animate__delay-1s':
+                index === bannerActiveIndex,
             }"
           >
             {{ item.des }}
-          </h5> -->
-          <!-- <div
+          </h5>
+          <div
             :class="[
               'link_primary',
               {
-                'animate__animated animate__fadeInDown animate__delay-1s':
-                  productActiveIndex === index,
+                'animate__animated animate__fadeInDown animate__delay-1500ms':
+                  index === bannerActiveIndex,
               },
             ]"
           >
@@ -110,9 +42,79 @@
             </span>
 
             <img src="@/assets/images/common/triangle.svg" />
-          </div> -->
+          </div>
         </div>
       </agile>
+    </client-only>
+    <div class="the-index-product" key="product">
+      <client-only>
+        <agile
+          ref="productSlide"
+          class="the-index-product-slide"
+          :options="{
+            dots: false,
+            navButtons: false,
+            autoplay: true,
+            pauseOnHover: true,
+          }"
+          @after-change="onProductChange"
+        >
+          <div
+            class="the-index-product-slide-item"
+            v-for="(item, index) in productList"
+            :key="item.title"
+            :style="{ backgroundImage: 'url(' + item.src + ')' }"
+          >
+            <h1
+              :class="{
+                'animate__animated animate__fadeInDown':
+                  productActiveIndex === index,
+              }"
+            >
+              {{ item.title }}
+            </h1>
+            <h1
+              :class="{
+                'animate__animated animate__fadeInDown':
+                  productActiveIndex === index,
+              }"
+            >
+              {{ item.title1 }}
+            </h1>
+            <h3
+              :class="{
+                'animate__animated animate__fadeInDown animate__delay-500ms':
+                  productActiveIndex === index,
+              }"
+            >
+              {{ item.title2 }}
+            </h3>
+            <h5
+              :class="{
+                'animate__animated animate__fadeInDown animate__delay-500ms':
+                  productActiveIndex === index,
+              }"
+            >
+              {{ item.des }}
+            </h5>
+            <div
+              :class="[
+                'link_primary',
+                {
+                  'animate__animated animate__fadeInDown animate__delay-1s':
+                    productActiveIndex === index,
+                },
+              ]"
+            >
+              <span class="gradient_text">
+                {{ $t('common.get_details') }}
+              </span>
+
+              <img src="@/assets/images/common/triangle.svg" />
+            </div>
+          </div>
+        </agile>
+      </client-only>
       <div class="the-index-product-thumbnails">
         <div
           v-for="(item, index) in productList"
@@ -125,14 +127,17 @@
         >
           <img :src="item.src" />
           <section>
-            <h3>{{ item.title3 }}</h3>
-            <p>{{ item.des1 }}</p>
+            <h3 :class="[{ gradient_text: index === productActiveIndex }]">
+              {{ item.title3 }}
+            </h3>
+            <p :class="[{ gradient_text: index === productActiveIndex }]">
+              {{ item.des1 }}
+            </p>
           </section>
         </div>
       </div>
     </div>
-    <!-- 客户案例 -->
-    <div class="the-index-case">
+    <div class="the-index-case" key="case">
       <div class="the-index-case-title">
         <h1>{{ $t('home.screen_3.case_title') }}</h1>
         <p>{{ $t('home.screen_3.case_des') }}</p>
@@ -185,8 +190,7 @@
         <img src="@/assets/images/common/triangle.svg" />
       </a>
     </div>
-    <!-- 新闻 -->
-    <div class="the-index-news">
+    <div class="the-index-news" key="news">
       <h1>{{ $t('home.screen_4.title') }}</h1>
       <h5>{{ $t('home.screen_4.des') }}</h5>
       <div class="the-index-news-content">
@@ -226,7 +230,7 @@
 // import { chkIp } from '@/api/common'
 
 export default {
-  name: 'the-index',
+  name: 'TheIndex',
   components: {},
   asyncData() {},
   data() {
@@ -832,4 +836,4 @@ export default {
     }
   }
 }
-</style> 
+</style>
